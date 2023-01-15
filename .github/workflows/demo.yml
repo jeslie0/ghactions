@@ -14,7 +14,6 @@ jobs:
       - name: Run the Action
         run: nix run github:jeslie0/nix-cow >> foo
       - name: Commit and push changes
-        uses: actions/checkout@v3
         run: |
           date > generated.txt
           git config user.name github-actions
