@@ -10,6 +10,5 @@ jobs:
       - uses: cachix/install-nix-action@v18
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
-      - run: nix run github:jeslie0/mkElmDerivation
       - run: nix shell nixpkgs#cowsay
       - run: cowsay "hi"
