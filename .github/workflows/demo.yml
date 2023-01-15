@@ -7,6 +7,9 @@ jobs:
     steps:
       - run: echo "Setting up nix!"
       - uses: actions/checkout@v3
+        with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+
       - uses: cachix/install-nix-action@v18
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
