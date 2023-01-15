@@ -12,7 +12,7 @@ jobs:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run the Action
-      - run: nix run github:jeslie0/nix-cow >> foo
+        run: nix run github:jeslie0/nix-cow >> foo
       - name: Commit and push changes
         uses: devops-infra/action-commit-push@master
         with:
